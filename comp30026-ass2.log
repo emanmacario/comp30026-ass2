@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.9)  16 OCT 2018 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.9)  16 OCT 2018 22:08
 entering extended mode
 **./comp30026-ass2.tex
 (comp30026-ass2.tex
@@ -292,7 +292,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 ("C:\Users\Allan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (0.789pt too wide) in paragraph at lines 71--73
+Overfull \hbox (0.789pt too wide) in paragraph at lines 73--75
 \OT1/cmr/m/n/12 We can sys-tem-at-i-cally trans-late DFA $\OML/cmm/m/it/12 D \O
 T1/cmr/m/n/12 = (\OML/cmm/m/it/12 Q; \OT1/cmr/m/n/12 \OML/cmm/m/it/12 ; ; q[]
 ; F\OT1/cmr/m/n/12 )$ into a PDA $\OML/cmm/m/it/12 P \OT1/cmr/m/n/12 = (\OML/cm
@@ -300,35 +300,40 @@ m/m/it/12 Q[]; \OT1/cmr/m/n/12 []\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12  \OML/cmm/
 m/it/12 ; []; q[]; F[]\OT1/cmr/m/n/12 )$
  []
 
+<Q5-PDA.jpg, id=1, 889.07156pt x 422.32782pt>
+File: Q5-PDA.jpg Graphic file (type jpg)
+<use Q5-PDA.jpg>
+Package pdftex.def Info: Q5-PDA.jpg  used on input line 84.
+(pdftex.def)             Requested size: 361.34723pt x 171.64758pt.
 [1
 
-{C:/Users/Allan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(comp30026-ass2.aux) ) 
+{C:/Users/Allan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <./Q5-PD
+A.jpg>] [3] (comp30026-ass2.aux) ) 
 Here is how much of TeX's memory you used:
- 3094 strings out of 492973
- 45009 string characters out of 3126693
- 113608 words of memory out of 3000000
- 6913 multiletter control sequences out of 15000+200000
+ 3100 strings out of 492973
+ 45082 string characters out of 3126693
+ 112608 words of memory out of 3000000
+ 6917 multiletter control sequences out of 15000+200000
  13996 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,13n,27p,283b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Allan/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Allan/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Allan/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Us
-ers/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr17.pfb><C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Allan/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Allan/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Al
-lan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb
->
-Output written on comp30026-ass2.pdf (2 pages, 124904 bytes).
+<C:/Users/Allan/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Allan/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Allan/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Us
+ers/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Allan/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Allan/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Al
+lan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+<C:/Users/Allan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti12.pfb>
+Output written on comp30026-ass2.pdf (3 pages, 171297 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

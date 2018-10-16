@@ -56,10 +56,12 @@ with transition function,
 
 \bigskip
 \noindent
-Hence, since $\id{drop}(\ma,R)$ can be recognised by NFA $N$, then $\id{drop}(\ma,R)$ is also a regular language.
+Therefore, since $\id{drop}(\ma,R)$ can be recognised by NFA $N$, then $\id{drop}(\ma,R)$ is a regular language.
+\bigskip
 
 \item $L=\{a^m b^n c^n \mid m, n \geq 0\}$
 \end{enumerate}
+\bigskip
 
 
 % CHALLENGE 5
@@ -74,12 +76,16 @@ We can systematically translate DFA $D=(Q,\Sigma,\delta,q_0,F)$ into a PDA $P=(Q
 \bigskip
 \noindent
 The general premise of this translation is to let the PDA use its stack to keep track
-of the current state in the DFA. Additionally, we will only allow the PDA to accept 
-an input string if the state on top of the stack is an original accept state in the DFA.
+of the current state in the DFA, with respect to the previous input consumed.. Additionally, 
+we will only allow the PDA to accept an input string if the state on top of the stack is an original 
+accept state in the DFA. The three state PDA can be seen as follows.
 
-\bigskip
+\begin{center}
+\includegraphics[width=5in,height=5in,keepaspectratio]{Q5-PDA.jpg}
+\end{center}
+
 \noindent
-Hence, we can formally define P to be the six-tuple $P=(\{q_I, q_R, q_A\}, \Sigma, Q, \delta', q_I, \{q_A\}\}$
+We can formally define P to be the six-tuple $P=(\{q_I, q_R, q_A\}, \Sigma, Q, \delta', q_I, \{q_A\}\}$
 with transition function,
 
 \[
@@ -90,9 +96,7 @@ with transition function,
       \{(q_A, \epsilon)\} & \text{if $q=q_R$, $x=\epsilon$ and $s \in F$} \\
   \end{cases}
 \]
-
-\emph{INSERT IMAGE HERE}
-
+\bigskip
 
 % CHALLENGE 6
 \subsection*{Challenge 6}
@@ -110,7 +114,7 @@ start symbol, $S$. We will use structural induction to show that $w \in A$.
 
 \bigskip
 \noindent
-Consider base case $w = \epsilon$. Clearly, $w$ does not contain the substring 001.
+Consider the base case $w = \epsilon$. Clearly, $w$ does not contain the substring 001.
 
 \bigskip
 \noindent
@@ -141,13 +145,13 @@ Hence, in no case does $w$ contain substring 001. Therefore, $L(G) \subseteq A$.
 
 \bigskip
 \noindent
-We would like to prove that for any binary string $s$ such that $s \in A, s \in L(G)$. We can argue
+We would like to prove that for any binary string $s$ such that $s \in A, then s \in L(G)$. We can argue
 the case using induction on the length of $s$.
 
 \bigskip
 \noindent
-For the basis step, observe that any arbitrary string $s \in A$ for which $|s|=0$, $|s|=1$ or $|s|=2$, $s \in L(G)$ is
-is also true. This can trivially be seen for the strings $\epsilon$, 0, 1, 00, 01, 10 and 11.
+For the basis step, observe that any arbitrary string $s \in A$ for which $|s|=0$, $|s|=1$ or $|s|=2$, then $s \in L(G)$
+is also true. This can trivially be seen for all possible strings in $A$ of length $\leq 2$ including $\epsilon$, 0, 1, 00, 01, 10 and 11.
 
 \bigskip
 \noindent
@@ -165,7 +169,7 @@ Thus, we have shown that for any arbitrary length string $s$ such that $s \in A$
 \bigskip
 \bigskip
 \noindent
-Since we have proven that both $L(G) \subseteq A$ and $A \subseteq L(G)$, then it
+Since we have proven that both $L(G) \subseteq A$ and $A \subseteq L(G)$, it
 follows that $L(G) = A$.
 
 
