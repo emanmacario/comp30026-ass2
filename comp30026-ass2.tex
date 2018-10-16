@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{color, colortbl}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\pagestyle{empty}
+\definecolor{Gray}{gray}{0.9}
+\textwidth      165mm
+\textheight     240mm
+\topmargin      -18mm
+\oddsidemargin  -2mm
+\evensidemargin 2mm
+\newcommand{\impl}{\mathbin{\Rightarrow}}
+\newcommand{\biim}{\mathbin{\Leftrightarrow}}
+\newcommand{\id}[1]{\mbox{\textit{#1}}}
+\newcommand{\ma}{\mathsf{a}}
+\newcommand{\mb}{\mathsf{b}}
+\newcommand{\mc}{\mathsf{c}}
+\newcommand{\deriv}{\ensuremath{d_1}}
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\DeclarePairedDelimiter\Floor\lfloor\rfloor
+\DeclarePairedDelimiter\Ceil\lceil\rceil
+
+\author{Emmanuel Macario - 831659}
+\title{COMP30026 Models of Computation Assignment 2}
+\date{October, 2018}
+
+\begin{document}
+
+\maketitle
+
+% CHALLENGE 4
+\subsection*{Challenge 4}
+
+\begin{enumerate}
+\item
+Let $D$ be a DFA $(Q,\Sigma,\delta,q_0,F)$ that recognises a regular language $R$. We can transform 
+$D$ into an NFA $N$ that recognises $\id{drop}(\ma,R)$ by replacing every transition involving the symbol
+$\ma$ with an epsilon transition.
+
+\bigskip
+\noindent
+More formally, we can define $N$ to be the five-tuple $N=(Q,\Sigma_\epsilon \setminus \{\ma\},\delta',q_0,F)$
+with the transition function,
+
+\[
+  \delta'(q, x) =
+  \begin{cases}
+  	\{\delta (q, x)\}     & \text{if $q \in Q$ and $x \in \Sigma \setminus \{\ma\}$} \\
+      \{\delta (q, \ma)\} & \text{if $q \in Q$ and $x = \epsilon$} \\
+  \end{cases}
+\]
+
+\bigskip
+\noindent
+Hence, since $\id{drop}(\ma,R)$ can be recognised by NFA $N$, then $\id{drop}(\ma,R)$ is also a regular language.
+
+\item $L=\{a^m b^n c^n \mid m, n \geq 0\}$
+
+\end{enumerate}
+% CHALLENGE 5
+\subsection*{Challenge 5}
+
+% CHALLENGE 6
+\subsection*{Challenge 6}
+
+
+
+
+
+
+\end{document}
