@@ -91,14 +91,47 @@ with transition function,
   \end{cases}
 \]
 
+\emph{INSERT IMAGE HERE}
 
 
 % CHALLENGE 6
 \subsection*{Challenge 6}
+We will show that $L(G) = A$ in two parts. Firstly, we will show $L(G) \subseteq A$ by using structural induction
+on the form of $G$. Then, we will show $A \subseteq L(G)$ by induction on the length of strings in $A$.
 
+\bigskip
+\noindent
+\textbf{Proof: $L(G) \subseteq A$}
 
+\bigskip
+\noindent
+Let $w \in L(G)$ such that $S \impl^* w$. That is, $w$ an arbitrary string in $L(G)$ that is derived from 
+start symbol, $S$. We will use structural induction to show that $w \in A$.
 
+\bigskip
+\noindent
+Consider base case $w = \epsilon$. Clearly, $w$ does not contain the substring 001.
 
+\bigskip
+\noindent
+For the first recursive case, let $w=w'0$ where $w' \in L(G)$. By the inductive hypothesis, $w'$ does not contain
+the substring 001. Hence, in this case $w$ cannot contain substring 001. This is because any new substrings generated 
+will have 0 as the end symbol, whereas 001 has 1 as its end symbol.
 
+\bigskip
+\noindent
+For the second recursive case, let $w=1w'$ where $w' \in L(G)$. By the inductive hypothesis, $w'$ does not contain
+the substring 001. Hence, in this case $w$ cannot contain the substring 001. This is because any new substrings generated 
+will have 1 as the start symbol, whereas 001 has 0 as its start symbol.
+
+\bigskip
+\noindent
+For the final recursive case, let $w=01w'$ where $w' \in L(G)$. By the inductive hypothesis, $w'$ does not contain the
+substring 001. Hence, in this case $w$ cannot contain the substring 001. This is because any newly generated substrings
+of length three will be of the form $01x$ or $1xx$, where $x \in \Sigma_\epsilon$. Clearly, none of these substrings are equal to 001.
+
+\bigskip
+\noindent
+Hence, in no case does $w$ contain substring 001. Therefore, $L(G) \subseteq A$.
 
 \end{document}
