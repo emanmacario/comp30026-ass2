@@ -37,14 +37,14 @@
 
 \begin{enumerate}
 \item
-Let $D$ be a DFA $(Q,\Sigma,\delta,q_0,F)$ that recognises a regular language $R$. We can transform 
+Let $D$ be a DFA $(Q,\Sigma,\delta,q_0,F)$ that recognises regular language, $R$. We can transform 
 $D$ into an NFA $N$ that recognises $\id{drop}(\ma,R)$ by replacing every transition involving the symbol
 $\ma$ with an epsilon transition.
 
 \bigskip
 \noindent
 More formally, we can define $N$ to be the five-tuple $N=(Q,\Sigma_\epsilon \setminus \{\ma\},\delta',q_0,F)$
-with the transition function,
+with transition function,
 
 \[
   \delta'(q, x) =
@@ -59,10 +59,39 @@ with the transition function,
 Hence, since $\id{drop}(\ma,R)$ can be recognised by NFA $N$, then $\id{drop}(\ma,R)$ is also a regular language.
 
 \item $L=\{a^m b^n c^n \mid m, n \geq 0\}$
-
 \end{enumerate}
+
+
 % CHALLENGE 5
 \subsection*{Challenge 5}
+
+Let $A$ be an arbitrary regular language. Since $A$ is regular, there must exist some DFA $D$ that acts as a recogniser for $A$.
+
+\bigskip
+\noindent
+We can systematically translate DFA $D=(Q,\Sigma,\delta,q_0,F)$ into a PDA $P=(Q',\Sigma',\Gamma,\delta',q'_0,F')$ with only three states, that recognises $A$.
+
+\bigskip
+\noindent
+The general premise of this translation is to let the PDA use its stack to keep track
+of the current state in the DFA. Additionally, we will only allow the PDA to accept 
+an input string if the state on top of the stack is an original accept state in the DFA.
+
+\bigskip
+\noindent
+Hence, we can formally define P to be the six-tuple $P=(\{q_I, q_R, q_A\}, \Sigma, Q, \delta', q_I, \{q_A\}\}$
+with transition function,
+
+\[
+  \delta'(q, x, s) =
+  \begin{cases}
+  	\{(q_R, q_0\$)\}   & \text{if $q=q_A$, $x=\epsilon$ and $s=\epsilon$} \\
+      \{(q_R, q_n)\}        & \text{if $q=q_R$, $x \in \Sigma$ and $\delta (s, x)=q_n$} \\
+      \{(q_A, \epsilon)\} & \text{if $q=q_R$, $x=\epsilon$ and $s \in F$} \\
+  \end{cases}
+\]
+
+
 
 % CHALLENGE 6
 \subsection*{Challenge 6}
