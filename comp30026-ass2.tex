@@ -38,7 +38,7 @@
 \begin{enumerate}
 \item
 Let $D$ be a DFA $(Q,\Sigma,\delta,q_0,F)$ that recognises regular language, $R$. We can transform 
-$D$ into an NFA $N$ that recognises $\id{drop}(\ma,R)$ by replacing every transition involving the symbol
+$D$ into an NFA $N$ that recognises $\id{drop}(\ma,R)$ by replacing every transition that consumes input symbol
 $\ma$ with an epsilon transition.
 
 \bigskip
@@ -65,7 +65,7 @@ Hence, since $\id{drop}(\ma,R)$ can be recognised by NFA $N$, then $\id{drop}(\m
 % CHALLENGE 5
 \subsection*{Challenge 5}
 
-Let $A$ be an arbitrary regular language. Since $A$ is regular, there must exist some DFA $D$ that acts as a recogniser for $A$.
+Let $A$ be an arbitrary regular language. Since $A$ is regular, there exists some DFA $D$ that acts as a recogniser for $A$.
 
 \bigskip
 \noindent
@@ -105,7 +105,7 @@ on the form of $G$. Then, we will show $A \subseteq L(G)$ by induction on the le
 
 \bigskip
 \noindent
-Let $w \in L(G)$ such that $S \impl^* w$. That is, $w$ an arbitrary string in $L(G)$ that is derived from 
+Let $w \in L(G)$ such that $S \impl^* w$. That is, let $w$ be an arbitrary string in $L(G)$ that is derived from 
 start symbol, $S$. We will use structural induction to show that $w \in A$.
 
 \bigskip
@@ -133,5 +133,40 @@ of length three will be of the form $01x$ or $1xx$, where $x \in \Sigma_\epsilon
 \bigskip
 \noindent
 Hence, in no case does $w$ contain substring 001. Therefore, $L(G) \subseteq A$.
+
+\bigskip
+\bigskip
+\noindent
+\textbf{Proof: $A \subseteq L(G)$}
+
+\bigskip
+\noindent
+We would like to prove that for any binary string $s$ such that $s \in A, s \in L(G)$. We can argue
+the case using induction on the length of $s$.
+
+\bigskip
+\noindent
+For the basis step, observe that any arbitrary string $s \in A$ for which $|s|=0$, $|s|=1$ or $|s|=2$, $s \in L(G)$ is
+is also true. This can trivially be seen for the strings $\epsilon$, 0, 1, 00, 01, 10 and 11.
+
+\bigskip
+\noindent
+For the inductive step, assume that $k \geq 2$ and that all strings $s \in A$ of length $0$ to $k$ are included in $L(G)$.
+Now, consider string $s' \in A$ of length $k+1$. If $s'$ ends with a 0, then $s' \in L(G)$ since the prefix of $s'$ of length $k$
+is also in $L(G)$, by the inductive hypothesis. Similarly, if $s'$ starts with a 1, then $s' \in L(G)$ since the suffix of $s'$ of length
+$k$ is also in $L(G)$. Finally, if $s'$ starts with 01, then $s \in L(G)$ since the suffix of $s'$ of length $k-1$ is also included in
+$L(G)$, by the inductive hypothesis.
+
+\bigskip
+\noindent
+Thus, we have shown that for any arbitrary length string $s$ such that $s \in A$, then $s \in L(G)$. It follows that $A \subseteq L(G)$.
+
+
+\bigskip
+\bigskip
+\noindent
+Since we have proven that both $L(G) \subseteq A$ and $A \subseteq L(G)$, then it
+follows that $L(G) = A$.
+
 
 \end{document}
